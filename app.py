@@ -563,7 +563,8 @@ def scale():                                    # shows scale (just a static pag
     return render_template("scale.html")
 
 
+create_tables()
 
 if __name__ == "__main__":
-    create_tables()
+    #create_tables()
     app.run(debug=True)

@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: ghostwhite;
+  color: #222;
+  min-height: 100vh;
+}
+
+header {
+  background-color: steelblue;
+  color: white;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+header .user-info {
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+
+header .user-info a {
+  color: lightcyan;
+  margin-left: 14px;
+  text-decoration: none;
+}
+
+header .user-info a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background-color: white;
+  border-bottom: 1px solid lightsteelblue;
+  padding: 0 30px;
+  display: flex;
+  gap: 4px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 12px 18px;
+  color: steelblue;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+  color: darkblue;
+  background-color: ghostwhite;
+}
+
+nav a.active {
+  border-bottom: 3px solid steelblue;
+  color: steelblue;
+}
+
+.page {
+  max-width: 860px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  color: steelblue;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid lightgray;
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 14px 0 8px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #444;
+}
+
+input, select {
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: #222;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: steelblue;
+}
+
+button {
+  padding: 8px 18px;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+button.btn-danger {
+  background-color: white;
+  color: crimson;
+  border: 1px solid crimson;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+}
+
+button.btn-danger:hover {
+  background-color: crimson;
+  color: white;
+}
+
+button.btn-small {
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  background-color: steelblue;
+}
+
+.login-wrapper {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.login-wrapper .card {
+  text-align: center;
+}
+
+.login-wrapper h2 {
+  font-size: 1.3rem;
+  color: steelblue;
+  margin-bottom: 6px;
+  border: none;
+}
+
+.login-wrapper p {
+  color: #666;
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+}
+
+.login-wrapper .form-group {
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.login-wrapper input {
+  width: 100%;
+}
+
+.login-wrapper button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.course-card {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.course-card-header {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f8fc;
+  border-bottom: 1px solid lightgray;
+}
+
+.course-card-header h3 {
+  font-size: 1rem;
+  color: steelblue;
+  margin: 0;
+}
+
+.course-card-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grade-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background-color: lightsteelblue;
+  color: darkblue;
+}
+
+.grade-badge.good{ 
+  background-color: honeydew;   color: darkgreen; 
+}
+.grade-badge.ok { 
+  background-color: lemonchiffon; color: goldenrod; 
+}
+.grade-badge.poor{ 
+  background-color: mistyrose;   color: crimson;   
+}
+
+.course-card-body {
+  padding: 14px 18px;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.info-item {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.info-item strong {
+  color: #222;
+}
+
+.feedback-box {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.feedback-blue{ 
+  background-color: aliceblue; border: 1px solid lightsteelblue; color: steelblue; 
+}
+.feedback-green { 
+  background-color: honeydew; border: 1px solid lightgreen;color: darkgreen; 
+}
+.feedback-red { 
+  background-color: mistyrose; border: 1px solid lightcoral; color: crimson;   
+}
+.feedback-yellow { 
+  background-color: lemonchiffon; border: 1px solid gold; color: goldenrod; 
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin-top: 6px;
+}
+
+th {
+  background-color: #f0f4f8;
+  color: #444;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 2px solid lightgray;
+}
+
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.type-assignment {
+  background-color: lavender; color: darkslateblue; 
+}
+.type-test{ 
+  background-color: mistyrose; color: darkred; 
+}
+
+input.grade-input {
+  width: 80px;
+  padding: 5px 8px;
+  font-size: 0.85rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.star-rating select {
+  padding: 5px 8px;
+  font-size: 0.88rem;
+}
+
+.needs-box {
+  background-color: #f9f9f9;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-top: 14px;
+}
+
+.needs-box h3 {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.result-good { 
+  color: darkgreen; font-weight: 600; margin-top: 8px; font-size: 0.9rem; 
+}
+
+.result-bad { 
+  color: crimson; font-weight: 600; margin-top: 8px; font-size: 0.9rem; 
+}
+
+.error-msg{ 
+  color: crimson;font-size: 0.88rem; margin-top: 8px; 
+}
+
+.cgpa-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: steelblue;
+  line-height: 1;
+}
+
+.cgpa-letter {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.cgpa-header-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.scale-table td:first-child { 
+  font-weight: 700; 
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: steelblue;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.toggle-btn:hover {
+  color: darkblue;
+  background: none;
+}
